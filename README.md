@@ -1,6 +1,7 @@
 # android_camera_utils
 
 ### Library containing utility classes for Android `Camera` related tasks.
+For image processing helper library visit [`here`](https://github.com/dasBikash84/android-image-utils).
 
 [![](https://jitpack.io/v/dasBikash84/android-camera-utils.svg)](https://jitpack.io/#dasBikash84/android-camera-utils)
 
