@@ -19,7 +19,7 @@ allprojects {
 Then, add the library to your module `build.gradle`
 ```gradle
 dependencies {
-    implementation 'com.github.dasBikash84:android_camera_utils:latest.release.here'
+    implementation 'com.github.dasBikash84:android-camera-utils:latest.release.here'
 }
 ```
 
