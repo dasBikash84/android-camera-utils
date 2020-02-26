@@ -2,7 +2,7 @@
 
 ### Library containing utility classes for Android `Camera` related tasks.
 
-[![](https://jitpack.io/v/dasBikash84/android_camera_utils.svg)](https://jitpack.io/#dasBikash84/android_camera_utils)
+[![](https://jitpack.io/v/dasBikash84/android-camera-utils.svg)](https://jitpack.io/#dasBikash84/android-camera-utils)
 
 ## Dependency
 
