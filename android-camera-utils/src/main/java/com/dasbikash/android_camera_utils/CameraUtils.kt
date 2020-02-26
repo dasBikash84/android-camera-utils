@@ -161,8 +161,8 @@ class CameraUtils {
  * @param requestCode Unique request code that will be injected on "onActivityResult" method of caller Activity
  * @return "true" on success
  * */
-fun Activity.launchCameraForImage(requestCode: Int): Boolean =
-    CameraUtils.launchCameraForImage(this,requestCode)
+fun Activity.launchCameraForImage(requestCode: Int,fileName:String?=null): Boolean =
+    CameraUtils.launchCameraForImage(this,requestCode,fileName)
 
 
 /**
@@ -171,8 +171,8 @@ fun Activity.launchCameraForImage(requestCode: Int): Boolean =
  * @param requestCode Unique request code that will be injected on "onActivityResult" method of caller AppCompatActivity
  * @return "true" on success
  * */
-fun AppCompatActivity.launchCameraForImage(requestCode: Int): Boolean =
-    CameraUtils.launchCameraForImage(this,requestCode)
+fun AppCompatActivity.launchCameraForImage(requestCode: Int,fileName:String?=null): Boolean =
+    CameraUtils.launchCameraForImage(this,requestCode,fileName)
 
 
 /**
@@ -181,5 +181,5 @@ fun AppCompatActivity.launchCameraForImage(requestCode: Int): Boolean =
  * @param requestCode Unique request code that will be injected on "onActivityResult" method of caller Fragment
  * @return "true" on success
  * */
-fun Fragment.launchCameraForImage(requestCode: Int): Boolean =
-    CameraUtils.launchCameraForImage(this,requestCode)
+fun Fragment.launchCameraForImage(requestCode: Int,fileName:String?=null): Boolean =
+    CameraUtils.launchCameraForImage(this,requestCode,fileName)
