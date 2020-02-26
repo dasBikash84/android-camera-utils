@@ -24,7 +24,7 @@ dependencies {
 ```
 
 ## Features
-- Image [`capture`](https://github.com/dasBikash84/android_camera_utils/blob/master/android_camera_utils/src/main/java/com/dasbikash/android_camera_utils/CameraUtils.kt) using camera api made very simple (`don't need Camera usage permission`).
+- Image [`capture`](https://github.com/dasBikash84/android-camera-utils/blob/master/android-camera-utils/src/main/java/com/dasbikash/android_camera_utils/CameraUtils.kt) using camera api made very simple (`don't need Camera usage permission`).
 
 ## Usage example
 
