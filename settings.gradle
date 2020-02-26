@@ -1,2 +1,2 @@
-include ':app'
+include ':android-camera-utils'
 rootProject.name='Android Camera Utils'
