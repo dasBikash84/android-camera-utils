@@ -1,4 +1,4 @@
-# android_camera_utils
+# android-camera-utils
 
 ### Library containing utility classes for Android `Camera` related tasks.
 For image processing helper library visit [`here`](https://github.com/dasBikash84/android-image-utils).
