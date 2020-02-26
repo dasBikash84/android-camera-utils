@@ -44,9 +44,10 @@ class CameraUtils {
 
         lateinit var mPhotoFile: File
 
-        private fun resetPhotoFile(context: Context) {
+        private fun resetPhotoFile(context: Context,fileName:String?) {
+            val imageFileName = fileName ?: "image_${System.currentTimeMillis()}"
             mPhotoFile = File.createTempFile(
-                UUID.randomUUID().toString(),
+                imageFileName,
                 JPG_FILE_EXT, context.filesDir
             )
         }
@@ -55,9 +56,9 @@ class CameraUtils {
             "${context.applicationContext.packageName}.fileprovider"
 
         private fun cameraLaunchPreProcess(
-            context: Context
+            context: Context,fileName:String?
         ): Intent? {
-            resetPhotoFile(context)
+            resetPhotoFile(context,fileName)
             val uri = FileProvider.getUriForFile(
                 context, getAuthority(context), mPhotoFile
             )
@@ -83,11 +84,12 @@ class CameraUtils {
          *
          * @param activity Caller Activity/AppCompatActivity
          * @param requestCode Unique request code that will be injected on "onActivityResult" method of caller Activity/AppCompatActivity
+         * @param fileName Optional image file name
          * @return "true" on success
          * */
         @JvmStatic
-        fun launchCameraForImage(activity: Activity, requestCode: Int): Boolean {
-            cameraLaunchPreProcess(activity)?.let {
+        fun launchCameraForImage(activity: Activity, requestCode: Int,fileName:String?=null): Boolean {
+            cameraLaunchPreProcess(activity,fileName)?.let {
                 activity.startActivityForResult(it, requestCode)
                 return true
             }
@@ -99,12 +101,13 @@ class CameraUtils {
          *
          * @param fragment Caller Fragment
          * @param requestCode Unique request code that will be injected on "onActivityResult" method of caller Fragment
+         * @param fileName Optional image file name
          * @return "true" on success
          * */
         @JvmStatic
-        fun launchCameraForImage(fragment: Fragment, requestCode: Int): Boolean {
+        fun launchCameraForImage(fragment: Fragment, requestCode: Int,fileName:String?=null): Boolean {
             fragment.context?.let {
-                cameraLaunchPreProcess(it)?.let {
+                cameraLaunchPreProcess(it,fileName)?.let {
                     fragment.startActivityForResult(it, requestCode)
                     return true
                 }
